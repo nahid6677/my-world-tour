@@ -1,0 +1,41 @@
+.country-contuner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container ul {
+    list-style-type: none;
+    margin-right: 40px;
+}
+
+.country {
+    width: auto;
+    border: 2px solid skyblue;
+    margin: 5px;
+    padding: 0 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn_container {
+    margin: 5px 0;
+}
+
+.btn_container .buttons {
+    background-color: gray;
+    margin: 0 3px;
+}
+
+.bg {
+    background-color: gray;
+}
+
+.back {
+    background-color: yellowgreen;
+}
+
