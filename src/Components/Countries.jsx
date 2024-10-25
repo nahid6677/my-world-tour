@@ -23,8 +23,18 @@ const Countries = () => {
             .then(res => res.json())
             .then(data => setCountries(data))
     }, [])
+
+
+    const [cart, setCart] = useState([]);
+
+    const handleAddToCard = bottle =>{
+        // console.log(bottle.name?.common)
+        const newCart = [...cart, bottle];
+        setCart(newCart);
+    }
     return (
         <div className="container">
+            <h4>Cart: {cart.length}</h4>
             <h3>Countries all: {countries.length}</h3>
             <div>
                 <ul>
@@ -39,7 +49,7 @@ const Countries = () => {
                 }
             </div>
             <div className="country-contuner">
-                {countries.map(country => <Country key={country.cca3} country={country} handleVisitedCountries={handleVisitedCountries} handleVisitedFlag={handleVisitedFlag}></Country>)}
+                {countries.map(country => <Country key={country.cca3} country={country} handleVisitedCountries={handleVisitedCountries} handleVisitedFlag={handleVisitedFlag} handleAddToCard={handleAddToCard}></Country>)}
             </div>
         </div>
 
